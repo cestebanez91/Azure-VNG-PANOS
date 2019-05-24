@@ -1,0 +1,8 @@
+<entry name="AzureVPN">
+ <network>
+   <layer3>
+     <member>tunnel.1</member>
+     <member>loopback.1</member>
+   </layer3>
+ </network>
+</entry>

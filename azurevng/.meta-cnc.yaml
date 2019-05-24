@@ -65,12 +65,12 @@ variables:
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
-  - name: tunnelinterface
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/tunnel
-    file: tunnelinterface.xml
-  - name: loopbackinterface
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/loopback
-    file: loopbackinterface.xml
+  - name: zone
+    xpath: /config/devices/entry[@name='localhost.localdomain']/zone
+    file: zone.xml
+  - name: interface
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface
+    file: interface.xml
   - name: routing
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
     file: routing.xml
