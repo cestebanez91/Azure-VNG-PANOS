@@ -1,4 +1,4 @@
-<entry name="default">
+<entry name="{{ panos_virtualrouter }}">
  <protocol>
    <bgp>
      <enable>yes</enable>
@@ -29,7 +29,7 @@
          <peer>
            <entry name="Azure">
              <peer-address>
-               <ip>10.0.1.14</ip>
+               <ip>{{ azure_bgp-peer }}</ip>
              </peer-address>
              <connection-options>
                <incoming-bgp-connection>
@@ -53,14 +53,14 @@
              </subsequent-address-family-identifier>
              <local-address>
                <ip>1.1.1.1/32</ip>
-               <interface>loopback.1</interface>
+               <interface>loopback.100</interface>
              </local-address>
              <bfd>
                <profile>Inherit-vr-global-setting</profile>
              </bfd>
              <max-prefixes>5000</max-prefixes>
              <enable>yes</enable>
-             <peer-as>65515</peer-as>
+             <peer-as>{{ azure_bgp_as }}</peer-as>
              <enable-mp-bgp>no</enable-mp-bgp>
              <address-family-identifier>ipv4</address-family-identifier>
              <enable-sender-side-loop-detection>yes</enable-sender-side-loop-detection>
@@ -74,7 +74,7 @@
        </entry>
      </peer-group>
      <router-id>1.1.1.1</router-id>
-     <local-as>65500</local-as>
+     <local-as>{{ panos_bgp_as }}</local-as>
      <install-route>yes</install-route>
      <policy>
        <import>
@@ -172,8 +172,8 @@
  <interface>
    <member>ethernet1/1</member>
    <member>ethernet1/2</member>
-   <member>loopback.1</member>
-   <member>tunnel.1</member>
+   <member>loopback.100</member>
+   <member>{{ panos_tunnel }}</member>
  </interface>
  <ecmp>
    <algorithm>
@@ -192,9 +192,9 @@
          <bfd>
            <profile>None</profile>
          </bfd>
-         <interface>tunnel.1</interface>
+         <interface>{{ panos_tunnel }}</interface>
          <metric>10</metric>
-         <destination>10.0.1.14/32</destination>
+         <destination>{{ azure_bgp-peer }}/32</destination>
          <route-table>
            <unicast/>
          </route-table>

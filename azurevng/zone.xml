@@ -1,8 +1,8 @@
 <entry name="AzureVPN">
  <network>
    <layer3>
-     <member>tunnel.1</member>
-     <member>loopback.1</member>
+     <member>{{ panos_tunnel }}</member>
+     <member>loopback.100</member>
    </layer3>
  </network>
 </entry>

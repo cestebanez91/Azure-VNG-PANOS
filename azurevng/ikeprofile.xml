@@ -28,9 +28,9 @@
    <passive-mode>yes</passive-mode>
  </protocol-common>
  <local-address>
-   <interface>ethernet1/1</interface>
+   <interface>{{ panos_ipsec_interface }}</interface>
  </local-address>
  <peer-address>
-   <ip>51.140.221.132</ip>
+   <ip>{{ azure_vgw_ip }}</ip>
  </peer-address>
 </entry>

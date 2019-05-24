@@ -1,13 +1,13 @@
 <tunnel>
  <units>
-   <entry name="tunnel.1">
+   <entry name="{{ panos_tunnel }}">
      <mtu>1350</mtu>
    </entry>
  </units>
 </tunnel>
 <loopback>
  <units>
-   <entry name="loopback.1">
+   <entry name="loopback.100">
      <adjust-tcp-mss>
        <enable>no</enable>
      </adjust-tcp-mss>

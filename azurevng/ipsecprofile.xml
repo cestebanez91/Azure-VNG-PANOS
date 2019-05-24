@@ -7,8 +7,8 @@
  </auto-key>
  <tunnel-monitor>
    <enable>yes</enable>
-   <destination-ip>10.0.1.14</destination-ip>
+   <destination-ip>{{ azure_bgp-peer }}</destination-ip>
    <tunnel-monitor-profile>default</tunnel-monitor-profile>
  </tunnel-monitor>
- <tunnel-interface>tunnel.1</tunnel-interface>
+ <tunnel-interface>{{ panos_tunnel }}</tunnel-interface>
 </entry>
