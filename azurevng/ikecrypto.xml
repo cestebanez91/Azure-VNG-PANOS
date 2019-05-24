@@ -1,0 +1,14 @@
+<entry name="AzureIKECrypto">
+  <hash>
+    <member>sha1</member>
+  </hash>
+  <dh-group>
+   <member>group2</member>
+  </dh-group>
+  <encryption>
+   <member>aes-256-cbc</member>
+  </encryption>
+  <lifetime>
+   <seconds>28800</seconds>
+  </lifetime>
+</entry>

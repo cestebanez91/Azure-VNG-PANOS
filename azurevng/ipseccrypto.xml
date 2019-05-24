@@ -1,0 +1,14 @@
+<entry name="AzureIPSecCrypto">
+ <esp>
+   <authentication>
+     <member>sha1</member>
+   </authentication>
+   <encryption>
+     <member>aes-256-cbc</member>
+   </encryption>
+ </esp>
+ <lifetime>
+   <seconds>27000</seconds>
+ </lifetime>
+ <dh-group>no-pfs</dh-group>
+</entry>

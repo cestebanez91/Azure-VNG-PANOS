@@ -1,0 +1,14 @@
+<entry name="Azure-Vnet-IPSec">
+ <auto-key>
+   <ike-gateway>
+     <entry name="Azure-Vnet"/>
+   </ike-gateway>
+   <ipsec-crypto-profile>AzureIPSecCrypto</ipsec-crypto-profile>
+ </auto-key>
+ <tunnel-monitor>
+   <enable>yes</enable>
+   <destination-ip>10.0.1.14</destination-ip>
+   <tunnel-monitor-profile>default</tunnel-monitor-profile>
+ </tunnel-monitor>
+ <tunnel-interface>tunnel.1</tunnel-interface>
+</entry>

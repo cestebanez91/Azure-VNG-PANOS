@@ -1,0 +1,8 @@
+<entry name="loopback.1">
+ <adjust-tcp-mss>
+  <enable>no</enable>
+ </adjust-tcp-mss>
+ <ip>
+  <entry name="1.1.1.1/32"/>
+ </ip>
+</entry>

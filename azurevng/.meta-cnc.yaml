@@ -1,0 +1,90 @@
+# skillet preamble information used by panhandler
+# ---------------------------------------------------------------------
+# unique snippet name
+name: azurevng
+# label used for menu selection
+label: Azure VNG IKE/IPSec
+description: Configure IKE, IPSec and BGP for PAN-OS to connect to Azure VNG
+
+# type of device configuration
+# common types are panorama, panos, and template
+# https://github.com/PaloAltoNetworks/panhandler/blob/develop/docs/metadata_configuration.rst
+type: panos
+# preload static or default-based templates
+extends:
+
+# grouping of like snippets for dynamic menu creation in panhandler
+labels:
+  collection:
+    - tutorial
+
+# ---------------------------------------------------------------------
+# end of preamble section
+
+# variables section
+# ---------------------------------------------------------------------
+# variables used in the configuration templates
+# type_hint defines the form field used by panhandler
+# type_hints can be text, ip_address, or dropdown
+variables:
+  - name: edl_name
+    description: EDL name
+    default: my_del
+    type_hint: text
+  - name: edl_description
+    description: EDL description
+    default: my_description
+    type_hint: text
+  - name: edl_url
+    description: EDL url
+    default: my_default_url
+    type_hint: text
+  - name: tag_color
+    description: Tag color
+    default: red
+    type_hint: dropdown
+    dd_list:
+      - key: blue
+        value: color3
+      - key: orange
+        value: color6
+  - name: tag_description
+    description: Tag description
+    default: my_default description
+    type_hint: text
+  - name: tag_name
+    description: tag name
+    default: my_tagname
+    type_hint: text
+
+# ---------------------------------------------------------------------
+# end of variables section
+
+# snippets section
+# ---------------------------------------------------------------------
+# snippets used for api configuration including xpath and element as file name
+# files will load in the order listed
+snippets:
+  - name: ikecrypto
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/network/ike/crypto-profiles/ike-crypto-profiles
+    file: ikecrypto.xml
+  - name: ikeprofile
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/network/ike/gateway
+    file: ikeprofile.xml
+  - name: ipseccrypto
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/network/ike/crypto-profiles/ipsec-crypto-profiles
+    file: ipseccrypto.xml
+  - name: ipsecprofile
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/network/tunnel/ipsec
+    file: ipsecprofile.xml
+  - name: tunnelinterface
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']]/network/interface/tunnel
+    file: tunnelinterface.xml
+  - name: loopbackinterface
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/network/interface/loopback
+    file: loopbackinterface.xml
+  - name: routing
+    xpath: /config/devices/entry[@name='localhost.localdomain']]/network/virtual-router
+    file: routing.xml
+  # ---------------------------------------------------------------------
+# end of snippets section
