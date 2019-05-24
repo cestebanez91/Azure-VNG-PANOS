@@ -18,7 +18,7 @@
        </graceful-restart>
      </routing-options>
      <peer-group>
-       <entry name="AzurePeer#{{ panos_tunnel }}">
+       <entry name="AzurePeer-{{ panos_tunnel }}">
          <type>
            <ebgp>
              <remove-private-as>yes</remove-private-as>
@@ -27,7 +27,7 @@
            </ebgp>
          </type>
          <peer>
-           <entry name="Azure#{{ panos_tunnel }}">
+           <entry name="Azure-{{ panos_tunnel }}">
              <peer-address>
                <ip>{{ azure_bgp_peer }}</ip>
              </peer-address>
@@ -100,7 +100,7 @@
                <route-table>unicast</route-table>
              </match>
              <used-by>
-               <member>AzurePeer#{{ panos_tunnel }}</member>
+               <member>AzurePeer-{{ panos_tunnel }}</member>
              </used-by>
              <enable>yes</enable>
            </entry>
@@ -129,7 +129,7 @@
                <route-table>unicast</route-table>
              </match>
              <used-by>
-               <member>AzurePeer#{{ panos_tunnel }}</member>
+               <member>AzurePeer-{{ panos_tunnel }}</member>
              </used-by>
              <enable>yes</enable>
            </entry>
@@ -183,7 +183,7 @@
  <routing-table>
    <ip>
      <static-route>
-       <entry name="AzureBGPPeer#{{ panos_tunnel }}">
+       <entry name="AzureBGPPeer-{{ panos_tunnel }}">
          <path-monitor>
            <enable>no</enable>
            <failure-condition>any</failure-condition>

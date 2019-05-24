@@ -1,7 +1,7 @@
-<entry name="Azure-Vnet-IPSec#{{ panos_tunnel }}">
+<entry name="Azure-Vnet-IPSec-{{ panos_tunnel }}">
  <auto-key>
    <ike-gateway>
-     <entry name="Azure-Vnet#{{ panos_tunnel }}"/>
+     <entry name="Azure-Vnet-{{ panos_tunnel }}"/>
    </ike-gateway>
    <ipsec-crypto-profile>AzureIPSecCrypto</ipsec-crypto-profile>
  </auto-key>

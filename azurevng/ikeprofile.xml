@@ -1,4 +1,4 @@
-<entry name="Azure-Vnet#{{ panos_tunnel }}">
+<entry name="Azure-Vnet-{{ panos_tunnel }}">
  <authentication>
    <pre-shared-key>
      <key>{{ panos_ike_presharedkey | md5_hash }}</key>
