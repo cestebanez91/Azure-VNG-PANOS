@@ -65,6 +65,15 @@ variables:
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
+  - name: tunnelinterface
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/tunnel
+    file: tunnelinterface.xml
+  - name: loopbackinterface
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/loopback
+    file: loopbackinterface.xml
+  - name: routing
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
+    file: routing.xml
   - name: ikecrypto
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/ike/crypto-profiles/ike-crypto-profiles
     file: ikecrypto.xml
@@ -77,14 +86,6 @@ snippets:
   - name: ipsecprofile
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/tunnel/ipsec
     file: ipsecprofile.xml
-  - name: tunnelinterface
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/tunnel
-    file: tunnelinterface.xml
-  - name: loopbackinterface
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/loopback
-    file: loopbackinterface.xml
-  - name: routing
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
-    file: routing.xml
+
   # ---------------------------------------------------------------------
 # end of snippets section
