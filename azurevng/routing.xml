@@ -29,7 +29,7 @@
          <peer>
            <entry name="Azure">
              <peer-address>
-               <ip>{{ azure_bgp-peer }}</ip>
+               <ip>{{ azure_bgp_peer }}</ip>
              </peer-address>
              <connection-options>
                <incoming-bgp-connection>
@@ -194,7 +194,7 @@
          </bfd>
          <interface>{{ panos_tunnel }}</interface>
          <metric>10</metric>
-         <destination>{{ azure_bgp-peer }}/32</destination>
+         <destination>{{ azure_bgp_peer }}/32</destination>
          <route-table>
            <unicast/>
          </route-table>

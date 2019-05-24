@@ -31,7 +31,7 @@ variables:
     description: Public IP address of Azure Virtual Network Gateway
     default:
     type_hint: ip_address
-  - name: azure_bgp-peer
+  - name: azure_bgp_peer
     description: Azure Virtual Network Gateway BGP peer ip address (should be the second last ip address of your Azure gateway subnet)
     default:
     type_hint: ip_address
