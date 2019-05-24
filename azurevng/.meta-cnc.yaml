@@ -66,7 +66,7 @@ variables:
 # files will load in the order listed
 snippets:
   - name: zone
-    xpath: /config/devices/entry[@name='localhost.localdomain']/zone
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/zone
     file: zone.xml
   - name: interface
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface
