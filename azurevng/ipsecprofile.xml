@@ -1,12 +1,12 @@
-<entry name="Azure-Vnet-IPSec">
+<entry name="Azure-Vnet-IPSec#{{ panos_tunnel }}">
  <auto-key>
    <ike-gateway>
-     <entry name="Azure-Vnet"/>
+     <entry name="Azure-Vnet#{{ panos_tunnel }}"/>
    </ike-gateway>
    <ipsec-crypto-profile>AzureIPSecCrypto</ipsec-crypto-profile>
  </auto-key>
  <tunnel-monitor>
-   <enable>yes</enable>
+   <enable>no</enable>
    <destination-ip>{{ azure_bgp_peer }}</destination-ip>
    <tunnel-monitor-profile>default</tunnel-monitor-profile>
  </tunnel-monitor>
