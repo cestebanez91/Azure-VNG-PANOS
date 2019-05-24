@@ -66,25 +66,25 @@ variables:
 # files will load in the order listed
 snippets:
   - name: ikecrypto
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/network/ike/crypto-profiles/ike-crypto-profiles
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/ike/crypto-profiles/ike-crypto-profiles
     file: ikecrypto.xml
   - name: ikeprofile
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/network/ike/gateway
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/ike/gateway
     file: ikeprofile.xml
   - name: ipseccrypto
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/network/ike/crypto-profiles/ipsec-crypto-profiles
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/ike/crypto-profiles/ipsec-crypto-profiles
     file: ipseccrypto.xml
   - name: ipsecprofile
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/network/tunnel/ipsec
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/tunnel/ipsec
     file: ipsecprofile.xml
   - name: tunnelinterface
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']]/network/interface/tunnel
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/tunnel
     file: tunnelinterface.xml
   - name: loopbackinterface
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/network/interface/loopback
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/loopback
     file: loopbackinterface.xml
   - name: routing
-    xpath: /config/devices/entry[@name='localhost.localdomain']]/network/virtual-router
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
     file: routing.xml
   # ---------------------------------------------------------------------
 # end of snippets section
