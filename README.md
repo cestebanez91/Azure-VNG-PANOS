@@ -5,13 +5,13 @@ Configure IKE/IPSec + BGP for PAN-OS and connect to Azure Virtual Network Gatewa
 This skillet will configure IKE/IPSec parameters and BGP in order to connect PAN-OS to Microsoft Azure VNG (Virtual Network Gateway).
 
 ## Skillet Details
-Authoring Group:  Public Cloud, Networking, IPSec.
-Documentation:  Link to detail documentation
-Github Location:  https://github.com/cestebanez91/Azure-VNG-PANOS
-PAN-OS Supported:  8.1.0 minimum
-Cloud Provider(s) Supported:  Azure only dedicated
-Type of Skillet:  PAN-OS, multiple xml.
-Purpose:  Config
+- Authoring Group: Public Cloud, Networking, IPSec.
+- Documentation: Azure VNG IPSec PANOS.pdf
+- Github Location: https://github.com/cestebanez91/Azure-VNG-PANOS
+- PAN-OS Supported: 8.1.0 minimum
+- Cloud Provider(s) Supported:  Azure only dedicated
+- Type of Skillet: PAN-OS, multiple xml.
+- Purpose: Config
 
 ## Detail Description
 This skillet will be used to connect your Palo Alto Network device (physical or VM-series) to any Microsoft Azure Virtual Network Gateway to establish an IPSec connection.
@@ -35,6 +35,7 @@ This skillet will configure PAN-OS with following features:
 -	interface.xml will configure tunnel and loopback interfaces
 -	zone.xml will configure zones
 -	routing.xml will configure BGP parameters to exchange routes
+
 
 
 # Prerequisite
